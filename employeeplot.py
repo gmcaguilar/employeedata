@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 
 def main():
 	plt.plot([1,2,3,4])
-	plt.ylabel('he protecc')
-	plt.xlabel("he attacc")
+	plt.ylabel('she protecc')
+	plt.xlabel("she attacc")
 	plt.show()
 
 
