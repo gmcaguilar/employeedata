@@ -1,4 +1,3 @@
-import numpy as np
 import matplotlib.pyplot as plt
 
 
@@ -7,8 +6,12 @@ def main():
         lines = f.read().splitlines()
         x = [line.split()[0] for line in lines]
         y = [line.split()[1] for line in lines]
-    plt.scatter(x,y)
+
+    xs = range(len(x))  # prevents scatter() from sorting x automatically
+    plt.scatter(xs, y)
+    plt.xticks(xs, x) 
     plt.show()
+
 
 if __name__ == "__main__":
     main()
