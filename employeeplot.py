@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# TODO: Add x and y labels
 
 def main():                                      
     with open("data.txt") as f:
@@ -11,6 +10,10 @@ def main():
 
     xs = range(len(x))  # prevents scatter() from sorting x automatically
     plt.xticks(xs, x)   # maps every xs to every x tick
+
+    # x and y labels
+    plt.xlabel("Month-Year")
+    plt.ylabel("Employees")
 
     # compute trendline
     xt = np.asarray(xs, dtype=int) # trendline input to prevent type mismatch
