@@ -10,9 +10,9 @@ def main():
 
     root = Tk()
     root.title("Big Data Processor")
-    L1 = Label(root, text="Enter file name:")
+    L1 = Label(root, text="Enter file path with file name:")
     L1.pack( side = LEFT)
-    E1 = Entry(root)
+    E1 = Entry(root, width = 75)
     E1.pack(side = LEFT)
     B1= Button(text = "create graph", command = lambda: graph(E1))
     B1.pack(side = LEFT)
