@@ -7,7 +7,6 @@ import numpy as np
 
 
 def main(): 
-
     root = Tk()
     root.title("Big Data Processor")
     L1 = Label(root, text="Enter file path with file name:")
@@ -17,6 +16,8 @@ def main():
     B1= Button(text = "create graph", command = lambda: graph(E1))
     B1.pack(side = LEFT)
     root.mainloop()
+
+        
 
 def graph(file):
     with open(file.get()) as f:
@@ -28,8 +29,8 @@ def graph(file):
     plt.xticks(xs, x)   # maps every xs to every x tick
 
     # convert x and y to numpy array of integers for compatibility
-    xt = np.asarray(xs, dtype=int) 
-    yt = np.asarray(y, dtype=int)  
+    xt = np.asarray(xs, dtype=float) 
+    yt = np.asarray(y, dtype=float)  
 
     plt.scatter(xt, yt)  # plot data points
 
